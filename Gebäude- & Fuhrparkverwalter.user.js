@@ -89,6 +89,7 @@
       "building-type-25": 100, // Bergrettungswache
       "building-type-26": 30, // Seenotrettungswache
       "building-type-28": 12, // Hubschrauberstation (Seenotrettung)
+     "buildign-type-29": 18, // Autobahnpolizei
     },
   };
  
@@ -267,6 +268,11 @@
       buildingTypeId: 28,
       smallBuilding: false,
     },
+   {
+    id: "29",
+    caption "Autobahnpolizei",
+    buildingTypeId: 29,
+    smallBuilding: false,
   ];
  
   const requiredExtensionsPerBuildingType = [
@@ -386,8 +392,12 @@
       pseudoBuildingTypeId: "28",
       extensions: [],
     },
+   {
+      pseudoBuildingTypeId: "9",
+      extensions: [0, 1, 2, 4, 5, 6, 8, 9],
+    },
   ];
-  const buildingsWithPersonal = [0, 2, 5, 6, 9, 11, 12, 13, 15, 17, 18, 19, 20, 21, 24, 25, 26, 28];
+  const buildingsWithPersonal = [0, 2, 5, 6, 9, 11, 12, 13, 15, 17, 18, 19, 20, 21, 24, 25, 26, 28, 29];
  
   function addModal() {
     const modal = document.createElement("div");
@@ -690,6 +700,14 @@
                 </label>
                 <div class="col-sm-1">
                   <input type="number" class="form-control" id="building-type-28" min="0" max="400" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="building-type-29" class="col-sm-4 control-label">
+                  Autobahnpolizei
+                </label>
+                <div class="col-sm-1">
+                  <input type="number" class="form-control" id="building-type-29" min="0" max="400" />
                 </div>
               </div>
               <div class="form-group">
